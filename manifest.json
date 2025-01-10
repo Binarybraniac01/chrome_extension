@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Chrome Ext Test",
+    "version": "1.0.0",
+    "description": "Chrome extension test",
+    "permissions": ["storage", "activeTab"],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "content_scripts": [
+      {
+        "js": ["src/content.jsx"],
+        "matches": ["http://localhost:5173/*"]
+      }
+    ]
+  }
